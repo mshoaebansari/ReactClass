@@ -1,0 +1,9 @@
+.MyContainor
+{
+    background-color:rgb(128, 84, 19);
+    color:rgb(142, 19, 76);
+    padding: 80px;
+    height: 300px;
+    align-items: center;
+    font-size: large;
+}
