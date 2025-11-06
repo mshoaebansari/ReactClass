@@ -1,0 +1,16 @@
+.MyCard
+{
+    background-color: black;
+    color:rgb(209, 164, 185);
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    border: white 1px;
+    border-radius: 5px;
+    font-size: 12px;
+    float: left;
+    margin: 10px;
+    margin-bottom: 5px;
+
+}
