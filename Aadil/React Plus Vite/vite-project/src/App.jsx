@@ -1,20 +1,65 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Greeting from './Greeting.jsx'
 import './App.css'
-import Success from './Success.jsx'
-import Danger from './Danger.jsx'
+import { RedButton, GreenButton, BlueButton } from './components/Buttons.jsx' 
+import UserData from './UserData.jsx'
+import { Card1 } from './card.jsx'
+import { Card2 } from './card.jsx'
+import { Card3 } from './card.jsx'
+import List from './List.jsx'
+import Table from './Table.jsx'
+import Weather from './Weather.jsx'
+import ListMap from './ListMap.jsx'
+import {StudentForm} from './SudentForm.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  let name = "Aadil"
+  let age = 23;
+  let roll = 35;
+  let marks ={
+    english: 90,
+    math: 95,
+    science: 89
 
+  };
+  let students = [
+    {name: "Aadil", age: 23, roll: 35},
+    {name: "Faizan", age: 23, roll: 34},
+    {name: "Danish", age: 19, roll: 36}
+  ];
+  let weatherData = [{
+        city: "Malegaon",
+        realfeel: 24,
+        wind: "ESE 10 km/h",
+        windgusts: "25 km/h",
+        humidity: "78%",
+        airquality:"Poor"
+    },
+    {
+        city: "Nashik",
+        realfeel: 24,
+        wind: "ESE 10 km/h",
+        windgusts: "25 km/h",
+        humidity: "78%",
+        airquality:"Poor"
+    }];
+  
   return (
     <>
       <Greeting />
-      <Success />
-      <Danger />
-
+      <RedButton />
+      <GreenButton />
+      <BlueButton />
+      <UserData n={name} a={age} r={roll} marks={marks}/>
+      <Card1 />
+      <Card2 />
+      <Card3 />
+      <List s={students}/>
+      <Table stable={students}/>
+      <Weather weater={weatherData}/>
+      <ListMap st={students}/>
+      <StudentForm />
     </>
   )
 }
