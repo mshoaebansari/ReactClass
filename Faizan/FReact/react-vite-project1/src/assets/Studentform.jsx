@@ -1,6 +1,15 @@
 import React from "react";
 
 export class Studentform extends React.Component {
+    constructor() {
+        super();
+        this.State = {
+            Uname : "",
+            Email : "",
+            Password : "",
+            ConfirmPassword : "",
+        }
+    }
     display() {
         alert("Your form was Registered");
     }
@@ -9,10 +18,14 @@ export class Studentform extends React.Component {
             <form onSubmit={() => this.display()}>
                 <h2>Student Registration Form</h2>
 
-                <input type="text" placeholder="User Name" /> <br />
-                <input type="email" placeholder="User Email" /> <br />
-                <input type="password" placeholder="User Password" /> <br />
-                <input type="password" placeholder="Confirm Password" /> <br />
+                <input type="text" placeholder="Uname"  onChange={(e) => this.setState({Uname:e.target.value})}
+                /> <br />
+                <input type="email" placeholder="Email" onChange={(e) => this.setState({Email:e.target.value})}
+                /> <br />
+                <input type="password" placeholder="Password" onChange={(e) => this.setState({Password:e.target.value})}
+ /> <br />
+                <input type="password" placeholder="ConfirmPassword" onChange={(e) => this.setState({ConfirmPassword:e.target.value})}
+ /> <br />
                 <label>Gender:</label> <br />
                 <input type="radio" name="gender" value="Male" /> Male 
                 <input type="radio" name="gender" value="Female" /> Female
@@ -27,7 +40,7 @@ export class Studentform extends React.Component {
                     <option value="Python">Python</option>
                 </select>
                 <br />
-                <input type="submit" value="Register" />
+                <input type="button" value="Register" onClick={()=>this.display()} />
             </form>
         );
     }
