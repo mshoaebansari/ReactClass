@@ -5,6 +5,16 @@ export class StudentForm extends React.Component {
        
     constructor (){
         super();
+        this.state = {
+            uname : "",
+            uno : "",
+            umail : "",
+            upass : "",
+            upass2 : "",
+            gender : "",
+            age : "",
+            language : ""
+        }
     };
 
     noti()
@@ -22,20 +32,20 @@ export class StudentForm extends React.Component {
         return(
             <div className='formstyle'>
                 <form action="">
-                    <input type="text" placeholder='Username'/> <br />
-                    <input type="number" placeholder='Number' /> <br />
-                    <input type="email" name="" id=""  placeholder='Email' /> <br />
-                    <input type="password" name="" id=""  placeholder='Enter Password'/> <br />
-                    <input type="password" name="" id=""  placeholder='Re-enter Password'/> <br />
+                    <input type="text" name="uname" placeholder='Username' onChange={(e)=>this.setState({uname:e.target.value})}/> <br />
+                    <input type="number" name="uno" placeholder='Number' onChange={(e)=>this.setState({uno:e.target.value})} /> <br />
+                    <input type="email" name="umail" id=""  placeholder='Email'  onChange={(e)=>this.setState({umail:e.target.value})}/> <br />
+                    <input type="password" name="upass" id=""  placeholder='Enter Password'  onChange={(e)=>this.setState({upass:e.target.value})}/> <br />
+                    <input type="password" name="upass2" id=""  placeholder='Re-enter Password'  onChange={(e)=>this.setState({upass2:e.target.value})}/> <br />
                     <p><b>Select Gender</b></p>
-                    <label htmlFor="radio">Male :</label>
-                    <input type="radio" name="gender" id="" />
-                    <label htmlFor="radio">Female :</label>
-                    <input type="radio" name="gender" id="" />
-                    <label htmlFor="radio">Other :</label>
+                    <label htmlFor="radio" name="male">Male :</label>
+                    <input type="radio" name="gender" id=""  onChange={(e)=>this.setState({gender:e.target.value})}/>
+                    <label htmlFor="radio" name="female">Female :</label>
+                    <input type="radio" name="gender" id=""  onChange={(e)=>this.setState({gender:e.target.value})}/>
+                    <label htmlFor="radio" name="other">Other :</label>
                     <input type="radio" name="gender" id="other" onClick={()=>this.otherFunction()}></input><br />
                     <label htmlFor="age"><b>Select Age Group</b></label><br />
-                    <select name="age" id="">
+                    <select name="age" id=""  onChange={(e)=>this.setState({age:e.target.value})}>
                         <option value="below18">Below 18</option>
                         <option value="18-25">18-25</option>
                         <option value="25-40">25-40</option>

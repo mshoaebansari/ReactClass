@@ -1,0 +1,21 @@
+.blueCard {
+    background-color: lightblue;
+    width: 420px;
+    float: left;
+    padding: 3.32px;
+    color:black;
+}
+.redCard {
+    background-color: crimson;
+    width: 420px;
+    float: left;
+    padding: 3.32px;
+    color:black;
+}
+.greenCard {
+    background-color: lightgreen;
+    width: 420px;
+    padding: 3.32px;
+    float: left;
+    color:black;
+}

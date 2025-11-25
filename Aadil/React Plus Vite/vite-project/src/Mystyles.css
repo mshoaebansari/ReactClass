@@ -1,0 +1,13 @@
+.container {
+    width: 95%;
+    border: solid 5px skyblue;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin: 0 auto;
+
+}
+.ProCard{
+    padding: 10px;
+    border: solid 5px yellow;
+}

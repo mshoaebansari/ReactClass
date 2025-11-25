@@ -11,7 +11,9 @@ import Table from './Table.jsx'
 import Weather from './Weather.jsx'
 import ListMap from './ListMap.jsx'
 import {StudentForm} from './SudentForm.jsx'
-
+import { Cardy } from './Cardy.jsx'
+import { AllCards } from './components/AllCards.jsx'
+import { Container } from './Container.jsx'
 function App() {
   const [count, setCount] = useState(0)
   let name = "Aadil"
@@ -44,6 +46,17 @@ function App() {
         humidity: "78%",
         airquality:"Poor"
     }];
+    let cardname=[
+      {
+        name:"Aadil",
+      },
+      {
+        name:"Faizan",
+      },
+      {
+        name:"Danish",
+      }
+    ]
   
   return (
     <>
@@ -60,6 +73,11 @@ function App() {
       <Weather weater={weatherData}/>
       <ListMap st={students}/>
       <StudentForm />
+      <Cardy students={students}/>
+      <AllCards cardType="blueCard" cardTitle="Blue"/>
+      <AllCards cardType="redCard" cardTitle="Red"/>
+      <AllCards cardType="greenCard" cardTitle="Green"/>
+      <Container cardTitle={cardname}/>
     </>
   )
 }
